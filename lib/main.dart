@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         // counter didn't reset back to zero; the application is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'Flutter Demo Home Page'),
+      home: new MyHomePage(title: 'แอพนี้เป็น Flutter App แรกของฉัน'),
     );
   }
 }
@@ -43,7 +43,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  int _counter = 999999;
 
   void _incrementCounter() {
     setState(() {
@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
-      _counter++;
+      _counter--;
     });
   }
 
@@ -89,12 +89,25 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            new ListView(
+              shrinkWrap: true,
+              padding: const EdgeInsets.all(20.0),
+              children: <Widget>[
+                const Text('I\'m dedicating every day to you'),
+                const Text('Domestic life was never quite my style'),
+                const Text('When you smile, you knock me out, I fall apart'),
+                const Text('And I thought I was so smart'),
+              ],
+            ),
             new Text(
-              'You have pushed the button this many times:',
+              'กดปุ่มได้อีก',
             ),
             new Text(
               '$_counter',
               style: Theme.of(context).textTheme.display1,
+            ),
+            new Text(
+              'ครั้ง',
             ),
           ],
         ),
